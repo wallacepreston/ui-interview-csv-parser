@@ -1,14 +1,30 @@
 import express from 'express';
 import jwt from 'jsonwebtoken';
-const { JWT_SECRET = '234709asefiaserh181349' } = process.env;
+const { JWT_SECRET = 'notsosecret' } = process.env;
 
 import users from './users.json';
+
+// type definitions
+import User from './@types/user';
+
+declare global {
+  namespace Express {
+    interface Request {
+      token?: string;
+      user?: User;
+    }
+  }
+}
 
 const app = express();
 
 const { PORT = 4000 } = process.env;
 
 app.use(express.json());
+
+app.get('/', (req, res) => {
+  res.send('Hello World!');
+});
 
 app.post('/users/login', async (req, res) => {
   // pull username and password from the request body
@@ -38,12 +54,15 @@ app.post('/users/login', async (req, res) => {
 app.use((req, res, next) => {
   // auth middleware that will be used to protect all the following endpoints
   // 👇 YOUR CODE HERE 👇 
-  
+
 });
 
-app.get('/', (req, res) => {
-  console.log(req);
-  res.send('Hello World!');
+app.get('/users/me', (req, res) => {
+  if (!req.user) {
+    res.send('No user found');
+  } else {
+    res.send(req.user);
+  }
 });
 
 // POST /csv
