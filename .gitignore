@@ -11,3 +11,4 @@ build/
 # misc
 .cache
 *.log
+*.csv
