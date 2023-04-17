@@ -14,7 +14,7 @@ Write your code in [src/app.ts](./src/app.ts) to complete the challenge.
     - If the token is valid, Set the user on the request object
 2. CSV Parser
   - POST /csv
-    - Fetches external data from the Pokemon API
+    - Fetches external data from the Pokemon API at [https://pokeapi.co/api/v2/pokemon?limit=15](https://pokeapi.co/api/v2/pokemon?limit=15)
     - Parses the data 
     - Saves the data to a file with the format <randomstring>.csv (fixed length of 10 characters)
     - Associates the file with the user in the database (mock database of big object with userIds as keys)
