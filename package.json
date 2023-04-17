@@ -1,0 +1,25 @@
+{
+  "name": "ui-interview-csv-parser",
+  "version": "1.0.0",
+  "description": "An Express server with authentication for parsing CSV",
+  "main": "src/app.ts",
+  "scripts": {
+    "start": "nodemon --watch 'src/**' --ext 'ts,json' --ignore 'src/**/*.spec.ts' --exec 'ts-node src/app.ts'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "4.17.17",
+    "@types/jsonwebtoken": "9.0.1",
+    "@types/node": "18.15.11",
+    "@types/sequelize": "4.28.14",
+    "nodemon": "2.0.22",
+    "ts-node": "10.9.1",
+    "typescript": "5.0.4"
+  },
+  "dependencies": {
+    "express": "4.18.2",
+    "jsonwebtoken": "9.0.0"
+  }
+}

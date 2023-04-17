@@ -1,0 +1,27 @@
+[
+  {
+    "username": "BobaFettuccine",
+    "password": "spaghettipistols",
+    "id": 1  
+  },
+  {
+    "username": "GrootBeer",
+    "password": "iamgrootandthirsty",
+    "id": 2  
+  },
+  {
+    "username": "FunkyChicken",
+    "password": "discofeathers",
+    "id": 3  
+  },
+  {
+    "username": "CaptainCrunchy",
+    "password": "crunchycaptain7",
+    "id": 4  
+  },
+  {
+    "username": "MamaMiaPizza",
+    "password": "pizzapastaparty",
+    "id": 5
+  }
+]
