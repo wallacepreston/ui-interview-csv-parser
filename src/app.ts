@@ -1,5 +1,7 @@
 import express from 'express';
 import jwt from 'jsonwebtoken';
+import fetch from 'node-fetch';
+import morgan from 'morgan';
 const { JWT_SECRET = 'notsosecret' } = process.env;
 
 import users from './users.json';
@@ -20,7 +22,11 @@ const app = express();
 
 const { PORT = 4000 } = process.env;
 
+app.use(morgan('dev'));
+
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 
 app.get('/', (req, res) => {
   res.send('Hello World!');
