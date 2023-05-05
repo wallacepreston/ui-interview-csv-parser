@@ -13,7 +13,7 @@ For auth, we are using JWT ([jsonwebtoken](https://www.npmjs.com/package/jsonweb
 ## Requirements
 1. Auth 
   - Express Middleware that checks if there is a valid Authorization header
-  - check for Authorization header with a valid Bearer token
+  - check for Authorization header with a valid `Bearer ${token}`
   - Assess the validity of the token
     - If the token is missing/invalid, Return an appropriate response
     - If the token is valid, Set the user on the request object
