@@ -7,7 +7,7 @@ Write your code in [src/app.ts](./src/app.ts) to complete the challenge.
 
 The TypeScript Express server is already set up with a `/users/login` route that returns a JWT token. You can call the login route and use this token to test your authorization middleware.
 
-For auth, we are using JWT ([jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken))
+For auth, we are using JWT ([jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken)), implemented with [Bearer Authentication](https://swagger.io/docs/specification/authentication/bearer-authentication/) (also called token authentication).
 
 
 ## Requirements
