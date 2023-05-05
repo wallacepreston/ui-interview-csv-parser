@@ -1,13 +1,17 @@
 # UI Interview: CSV Parser
 
-For this challenge, we want to create a CSV parser API that queries the Pokemon API and saves the data to a CSV file. The API should also be able to pull the data from the CSV file and return it as a JSON object. This API should also have authentication and authorization middleware, identifying which user made the request and saved the file.
 
-Write your code in [src/app.ts](./src/app.ts) to complete the challenge.
+For this challenge, we want to create an Express authorization middleware that will be run for all subsequent routes. Then, we want to create a CSV parser API that will query the Pokemon API and save the data to a CSV file. The API should also be able to pull the data from the CSV file and return it as a JSON object.
+
+Write your code in [src/app.ts](./src/app.ts) to complete the challenge. 
+
+The TypeScript Express server is already set up with a `/users/login` route that returns a JWT token. You can call the login route and use this token to test your authorization middleware.
+
+For auth, we are using JWT ([jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken))
 
 
 ## Requirements
-1. Auth
-  - We use JWT ([jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken))
+1. Auth 
   - Express Middleware that checks if there is a valid Authorization header
   - check for Authorization header with a valid Bearer token
   - Assess the validity of the token
