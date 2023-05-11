@@ -20,13 +20,13 @@ For auth, we are using JWT ([jsonwebtoken](https://www.npmjs.com/package/jsonweb
 2. CSV Parser
   - POST /csv
     - Fetches external data from the Pokemon API at [https://pokeapi.co/api/v2/pokemon?limit=15](https://pokeapi.co/api/v2/pokemon?limit=15)
-    - Parses the data 
-    - Generates an id which is a random string (fixed length of 10 characters)
+    - Converts the data to CSV format
+    - Generates an id which is a random string (fixed length)
     - Saves the data to a file
-      - Saving the file in any directory in the workspace/server is fine
-      - Save it with the format <randomstring-from-last-step>.csv
-    - Returns the randomstring as a "id" property on the response object
+      - Save the file anywhere in the server
+      - Use the id generated above as the filename, with the format `<id>.csv`
+    - Returns the randomstring as an `id` property on the response object
   - GET /csv/:id
-    - Fetches the file with the name <id>.csv
+    - Fetches the file with the name `<id>.csv`
     - Parses the data
     - Returns the parsed data as a JSON object
